@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Set;
 
 abstract class GraphUtilsTest {
@@ -12,7 +15,13 @@ abstract class GraphUtilsTest {
 
         Set<Graph> allSubGraphsOfBaseGraph = GraphUtils.allSubGraphsOf(baseGraph);
 
-        for( Graph subGraph : allSubGraphsOfBaseGraph )
+        Graph[] allSubGraphsArray = new Graph[0];
+
+        allSubGraphsArray = allSubGraphsOfBaseGraph.toArray(allSubGraphsArray);
+
+        Arrays.sort(allSubGraphsArray, Comparator.comparingInt((Graph graph) -> graph.getNodes().size()).thenComparingInt(graph -> graph.getEdgesIds().size()));
+
+        for( Graph subGraph : allSubGraphsArray )
         {
             System.out.println(subGraph.toString());
         }

@@ -167,8 +167,8 @@ public class Graph implements Cloneable {
     public String toString() {
         return "Graph{ " +
                 "nodes=" + nodes +
-                ", edgeTargetMap=" + edgeTargetMap +
                 ", edgeSourceMap=" + edgeSourceMap +
+                ", edgeTargetMap=" + edgeTargetMap +
                 " }";
     }
 }
