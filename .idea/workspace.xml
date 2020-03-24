@@ -13,42 +13,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1789218193">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.27" value="1" />
-          <entry key="project.open.time.33" value="1" />
-          <entry key="project.open.time.35" value="1" />
-          <entry key="project.open.time.51" value="1" />
-          <entry key="project.opened" value="4" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="groovy" value="2" />
-          <entry key="java" value="5" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Groovy" value="2" />
-          <entry key="JAVA" value="5" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="5713" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="5713" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
@@ -190,7 +154,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Unnamed" type="Java Scratch" factoryName="Java Scratch">
+    <configuration name="Unnamed" type="Java Scratch">
       <option name="MAIN_CLASS_NAME" value="main" />
       <module name="GraphUtils" />
       <option name="SCRATCH_FILE_URL" value="file://$PROJECT_DIR$/out/production/GraphUtils/SetUtils.class" />
@@ -199,8 +163,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Java Scratch.Unnamed" />
       <item itemvalue="Application.SetUtils" />
+      <item itemvalue="Java Scratch.Unnamed" />
     </list>
     <recent_temporary>
       <list>
@@ -220,15 +184,6 @@
       <updated>1532552664816</updated>
     </task>
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1293" height="638" extended-state="6" />
@@ -265,6 +220,12 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="524" y="289" width="317" height="223" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1585048545123">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="524" y="289" width="317" height="223" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.27.1366.741/1366.0.1920.1080@0.27.1366.741" timestamp="1585048545123" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/SetUtilsTest.groovy" />
