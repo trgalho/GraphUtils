@@ -39,26 +39,6 @@ public class SetUtils {
     }
 
     /**
-     * Method used to print all subsets from a set ordering them by size.
-     * Useful for check if the powerSet was sucessfully created.
-     * @param set - Any set of sets.
-     */
-    public static <T> void printSubSetsSortedBySize(Set<Set<T>> set){
-        ArrayList<Set> setAsArray = new ArrayList<>(set);
-
-        setAsArray.sort(new Comparator<Set>() {
-            @Override
-            public int compare(Set o1, Set o2) {
-                return o1.size() - o2.size();
-            }
-        });
-
-        for(Set subset : setAsArray) {
-            System.out.println(subset);
-        }
-    }
-
-    /**
      * Method to add an element to all corresponding subsets.
      *
      * @param element element to add in the set
@@ -73,17 +53,4 @@ public class SetUtils {
         }
     }
 
-    /**
-     * Test method creating a powerSet for a predefined set of size 4.
-     * @param args
-     */
-    public static void main(String[] args) {
-        Set<Integer> set = new HashSet<>();
-        set.add(1);
-        set.add(2);
-        set.add(3);
-        set.add(4);
-        System.out.println("Test for the set: "+set);
-        SetUtils.printSubSetsSortedBySize(SetUtils.powerSet(set));
-    }
 }
