@@ -7,11 +7,9 @@ import java.util.Set;
  * A Class to perform some sets math operations not definied by HashSet implementation.
  *
  * @author Talisson Galho - trgalho at GitHub
- *
- * @param <E> type of element that is contained in your set.
  */
 
-public class SetUtils <E>{
+public class SetUtils {
     /**
      *  Returns  all subsets of a set using Truth Table input method.
  	 *	First we created all possible subsets (2^n, where n is size of set)
@@ -23,11 +21,12 @@ public class SetUtils <E>{
      * @param set - any set
      * @return A Set contain all subsets of the argument.
      */
-    public Set<Set<E>> powerSet(Set<E> set){
-        E[] setAsArray = (E[]) set.toArray();
+    public static <T> Set<Set<T>> powerSet(Set<T> set){
+        T[] setAsArray = (T[]) set.toArray();
         int pwrStsize = (int) (Math.pow(2, (double) set.size()));
 
-        ArrayList<HashSet<E>> powerArray= new ArrayList<>();
+        ArrayList<HashSet<T>> powerArray= new ArrayList<>();
+
         for (int i = 0; i < pwrStsize; i++) {
             powerArray.add(new HashSet<>());
         }
@@ -36,7 +35,7 @@ public class SetUtils <E>{
             int n = (int) (Math.pow(2,(i)));
             addElementToSubsets( setAsArray[i], powerArray,n);
         }
-        return new HashSet<Set<E>>(powerArray);
+        return new HashSet<Set<T>>(powerArray);
     }
 
     /**
@@ -44,14 +43,16 @@ public class SetUtils <E>{
      * Useful for check if the powerSet was sucessfully created.
      * @param set - Any set of sets.
      */
-    public void printSubSetsSortedBySize(Set<Set> set){
+    public static <T> void printSubSetsSortedBySize(Set<Set<T>> set){
         ArrayList<Set> setAsArray = new ArrayList<>(set);
+
         setAsArray.sort(new Comparator<Set>() {
             @Override
             public int compare(Set o1, Set o2) {
                 return o1.size() - o2.size();
             }
         });
+
         for(Set subset : setAsArray) {
             System.out.println(subset);
         }
@@ -64,7 +65,7 @@ public class SetUtils <E>{
      * @param power powerset contain the set to receive the element
      * @param n numbers of set to add the element before alternate
      */
-    private void addElementToSubsets(E element, ArrayList<HashSet<E>> power, int n){
+    private static <T> void addElementToSubsets(T element, ArrayList<HashSet<T>> power, int n){
         for (int i = 0; i < power.size(); i+=2*n) {
             for (int j = 0; j < n; j++) {
                 power.get(j+i).add(element);
@@ -82,8 +83,7 @@ public class SetUtils <E>{
         set.add(2);
         set.add(3);
         set.add(4);
-        SetUtils setUtils = new SetUtils<Integer>();
         System.out.println("Test for the set: "+set);
-        setUtils.printSubSetsSortedBySize(setUtils.powerSet(set));
+        SetUtils.printSubSetsSortedBySize(SetUtils.powerSet(set));
     }
 }
